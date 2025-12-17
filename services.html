@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="שירותי מנעולן מקצועיים: פתיחת דלתות חירום 24/7, החלפת מנעולים, שדרוג אבטחה, התקנת מנעולים דיגיטליים ועוד. מנעולן בזול באזור.">
+  <meta name="keywords" content="מנעולן חירום 24 שעות, פתיחת דלתות ללא נזק, מנעולן בזול באזור, החלפת מנעולים">
+  <title>שירותי מנעולן חירום 24 שעות מקצועיים — מנעולן</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/* Zappy Attribution Header Styles */
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+<!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '833aaef8-42b5-4ec2-83f3-0e0be2bcbb5c',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        trackEvent('click', {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        });
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        trackEvent('navigation', {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        });
+      }
+    }, true);
+  }
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+
+    <style id="zappy-mobile-submenu-styles">
+      /* Mobile submenu accordion styles */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
+          position: static !important;
+          transform: none !important;
+          box-shadow: none !important;
+          background: transparent !important;
+          margin-top: 0 !important;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+          padding: 0 !important;
+          border-radius: 0 !important;
+        }
+        .sub-menu.mobile-expanded {
+          max-height: 500px !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          padding: 8px 0 8px 16px !important;
+        }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
+          padding: 8px 16px 8px 0 !important;
+        }
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
+          opacity: 0; visibility: hidden; pointer-events: none;
+        }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
+          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
+        }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
+          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
+        }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
+          flex: 1 !important;
+        }
+        .mobile-submenu-toggle {
+          display: flex !important; align-items: center !important; justify-content: center !important;
+          width: 44px !important; height: 44px !important; background: transparent !important;
+          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
+          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
+        }
+        .mobile-submenu-toggle::after {
+          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
+          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
+          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
+        }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
+          flex-basis: 100% !important; width: 100% !important;
+        }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
+        .sub-menu a:hover { background-color: transparent !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<!-- Zappy Attribution Header -->
+<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
+  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
+</div>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <div class="nav-brand">
+        <a href="/" class="logo-link">
+          <img src="/assets/logo.webp" alt="מנעולן" class="logo">
+        </a>
+      </div>
+      
+      <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
+        <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+        <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+      </button>
+      
+      <button class="phone-header-btn" aria-label="התקשר אלינו">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="/services">שירותים</a></li>
+        <li><a href="/about">אודות</a></li>
+      </ul>
+      
+      <div class="nav-cta-container">
+        <li class="nav-cta-item">
+          <a href="/contact" class="nav-cta-btn">צור קשר</a>
+        </li>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>שירותי מנעולן חירום 24 שעות מקצועיים</h1>
+      <h3>פתרונות אבטחה מקיפים לבית ולעסק</h3>
+    </div>
+  </section>
+
+  <section class="section service-section" id="שירות-מנעולן-חירום-24-שעות" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>שירות מנעולן חירום 24 שעות</h2>
+          <p>כשאתם נעולים בחוץ או מתמודדים עם בעיית נעילה דחופה, אתם זקוקים למנעולן שמגיע מהר ופותר את הבעיה במקצועיות. צוות המנעולנים שלנו זמין 24 שעות ביממה, 7 ימים בשבוע, כולל שבתות וחגים. אנחנו מבינים שמצבי חירום לא מחכים לשעות נוחות, ולכן אנחנו תמיד כאן בשבילכם.</p>
+          <p>השירות שלנו כולל הגעה מהירה לכל מקום בארץ, עם כל הציוד הדרוש לפתרון הבעיה במקום. המנעולן המקצועי שלנו מצויד בכלים מתקדמים ובידע עדכני לטיפול בכל סוגי המנעולים והדלתות. אנחנו מתחייבים למתן שירות מהיר, יעיל ובמחיר הוגן.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> זמינות מלאה 24/7 כולל שבתות וחגים</li>
+            <li><i class="fas fa-check"></i> הגעה מהירה תוך 20-30 דקות</li>
+            <li><i class="fas fa-check"></i> טיפול בכל סוגי המנעולים והדלתות</li>
+            <li><i class="fas fa-check"></i> מחירים שקופים ללא הפתעות</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-4" data-context="מנעולן מקצועי מגיע לשירות חירום עם רכב צהוב עם כלי עבודה" src="/assets/service-service-4.webp" alt="מנעולן חירום 24 שעות מגיע לשירות">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="פתיחת-דלתות-ללא-נזק" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-content">
+          <h2>פתיחת דלתות ללא נזק</h2>
+          <p>אחד השירותים המבוקשים ביותר שלנו הוא פתיחת דלתות ללא נזק. אנחנו מבינים שהדלת שלכם היא השקעה יקרה, ואנחנו מתחייבים לפתוח אותה בצורה המקצועית ביותר תוך שמירה על שלמותה. המנעולן המנוסה שלנו משתמש בטכניקות מתקדמות ובכלים מיוחדים שמאפשרים פתיחה עדינה ויעילה.</p>
+          <p>השירות כולל פתיחת דלתות מכל הסוגים: דלתות עץ, מתכת, דלתות משוריינות, דלתות אוטומטיות ועוד. אנחנו מטפלים בכל סוגי המנעולים, כולל מנעולים רגילים, מנעולי בטחון, מנעולים דיגיטליים ומנעולים חכמים. בכל מקרה, אנחנו שואפים לפתור את הבעיה מבלי לגרום נזק לדלת או למנעול, וכך לחסוך לכם עלויות תיקון מיותרות.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> פתיחה עדינה ומקצועית ללא נזק</li>
+            <li><i class="fas fa-check"></i> טיפול בכל סוגי הדלתות והמנעולים</li>
+            <li><i class="fas fa-check"></i> שימוש בטכניקות וכלים מתקדמים</li>
+            <li><i class="fas fa-check"></i> חיסכון בעלויות תיקון ושיפוץ</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-5" data-context="ידיים מקצועיות של מנעולן פותחות דלת בזהירות עם כלי מיוחד" src="/assets/service-service-5.webp" alt="פתיחת דלתות ללא נזק מקצועית">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="החלפה-והתקנת-מנעולים" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>החלפה והתקנת מנעולים</h2>
+          <p>האם המנעול שלכם ישן, פגום או לא מספק את רמת האבטחה הנדרשת? אנחנו מציעים שירות מקצועי של החלפה והתקנת מנעולים לכל סוגי הדלתות. המנעולן שלנו יעזור לכם לבחור את המנעול המתאים ביותר לצרכים שלכם, תוך התחשבות ברמת האבטחה הנדרשת, סוג הדלת והתקציב שלכם.</p>
+          <p>אנחנו עובדים עם מותגי המנעולים המובילים בשוק ומציעים מגוון רחב של אפשרויות: מנעולי בטחון מתקדמים, מנעולים דיגיטליים, מנעולים חכמים, מנעולי גלגל שיניים ועוד. ההתקנה נעשית בצורה מקצועית ומהירה, עם אחריות מלאה על העבודה והחלקים. אנחנו גם מספקים שירות של שכפול מפתחות ויצירת מערכות מפתח אחיד לנוחיותכם.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> מגוון רחב של מנעולים איכותיים</li>
+            <li><i class="fas fa-check"></i> ייעוץ מקצועי לבחירת המנעול המתאים</li>
+            <li><i class="fas fa-check"></i> התקנה מהירה ומקצועית</li>
+            <li><i class="fas fa-check"></i> אחריות מלאה על העבודה והחלקים</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-6" data-context="מנעולן מתקין מנעול בטחון חדש בדלת כניסה" src="/assets/service-service-6.webp" alt="החלפה והתקנת מנעולים מקצועית">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="שדרוג-מערכות-אבטחה" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-content">
+          <h2>שדרוג מערכות אבטחה</h2>
+          <p>בעידן המודרני, אבטחת הבית או העסק שלכם דורשת יותר ממנעול רגיל. אנחנו מציעים פתרונות אבטחה מתקדמים שמשלבים טכנולוגיה חדישה עם מקצועיות ואמינות. המנעולן המומחה שלנו יעזור לכם לבחור ולהתקין את מערכת האבטחה המתאימה ביותר לצרכים שלכם.</p>
+          <p>השירותים שלנו כוללים התקנת מנעולים דיגיטליים עם קוד, מנעולים ביומטריים (טביעת אצבע), מערכות בקרת גישה, מנעולים חכמים הניתנים לשליטה מרחוק דרך הסמארטפון, ומערכות אבטחה משולבות. אנחנו גם מספקים שירות של שדרוג מערכות קיימות והתאמתן לצרכים המשתנים שלכם. כל המערכות מותקנות בצורה מקצועית עם הדרכה מלאה על השימוש והתחזוקה.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> מנעולים דיגיטליים וביומטריים</li>
+            <li><i class="fas fa-check"></i> מערכות בקרת גישה מתקדמות</li>
+            <li><i class="fas fa-check"></i> מנעולים חכמים עם שליטה מרחוק</li>
+            <li><i class="fas fa-check"></i> הדרכה מלאה ותמיכה טכנית</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-7" data-context="מנעולן מתקין מנעול דיגיטלי מתקדם עם מסך מגע בדלת" src="/assets/service-service-7.webp" alt="שדרוג מערכות אבטחה מתקדמות">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="שירותי-מנעולן-לעסקים" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>שירותי מנעולן לעסקים</h2>
+          <p>עסקים זקוקים לפתרונות אבטחה מיוחדים שמתאימים לצרכים הייחודיים שלהם. אנחנו מספקים שירותי מנעולן מקצועיים לעסקים מכל הסוגים: משרדים, חנויות, מפעלים, מחסנים, מבני ציבור ועוד. המנעולן שלנו מבין את הדרישות המיוחדות של סביבה עסקית ומציע פתרונות מותאמים אישית.</p>
+          <p>השירותים כוללים התקנת מערכות מפתח אחיד, מערכות בקרת גישה לעובדים, מנעולים אלקטרוניים, מערכות אבטחה משולבות, ותחזוקה שוטפת של מערכות קיימות. אנחנו מספקים שירות מהיר ודיסקרטי שלא משבש את פעילות העסק, עם אפשרות לתיאום מראש ועבודה בשעות לא שגרתיות. בנוסף, אנחנו מציעים חוזי תחזוקה שנתיים למתן שירות קבוע ואמין.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> פתרונות מותאמים לעסקים</li>
+            <li><i class="fas fa-check"></i> מערכות בקרת גישה ומפתח אחיד</li>
+            <li><i class="fas fa-check"></i> שירות מהיר ודיסקרטי</li>
+            <li><i class="fas fa-check"></i> חוזי תחזוקה ותמיכה שוטפת</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-8" data-context="מנעולן מתקין מערכת בקרת גישה במשרד מודרני" src="/assets/service-service-8.webp" alt="שירותי מנעולן לעסקים">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="תיקון-ותחזוקת-מנעולים" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail reverse">
+      
+        <div class="service-detail-content">
+          <h2>תיקון ותחזוקת מנעולים</h2>
+          <p>מנעול שלא עובד כמו שצריך יכול להיות מטרד יומיומי ולהוות סיכון אבטחתי. אנחנו מציעים שירות מקצועי של תיקון ותחזוקת מנעולים לכל הסוגים. המנעולן המנוסה שלנו יאבחן את הבעיה במהירות ויספק פתרון יעיל ומהיר.</p>
+          <p>השירות כולל תיקון מנעולים תקועים, מנעולים שקשה להפעיל, מנעולים רופפים, החלפת גלילים פגומים, שימון וכיוונון מנעולים, ותיקון מנגנוני נעילה אוטומטיים. אנחנו גם מספקים שירות של תחזוקה מונעת שעוזר למנוע בעיות עתידיות ולהאריך את חיי המנעול. בכל מקרה, אנחנו שואפים לתקן את המנעול הקיים במקום להחליף אותו, כדי לחסוך לכם כסף.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> אבחון מהיר ומדויק של בעיות</li>
+            <li><i class="fas fa-check"></i> תיקון מקצועי של כל סוגי המנעולים</li>
+            <li><i class="fas fa-check"></i> תחזוקה מונעת להארכת חיי המנעול</li>
+            <li><i class="fas fa-check"></i> חיסכון בעלויות החלפה מיותרות</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-9" data-context="מנעולן מתקן ומשמן מנעול דלת בצורה מקצועית" src="/assets/service-service-9.webp" alt="תיקון ותחזוקת מנעולים">
+        </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section service-section" id="שירותי-מנעולן-לרכב" data-zappy-section="true">
+  <div class="container">
+    <div class="service-detail">
+      
+        <div class="service-detail-content">
+          <h2>שירותי מנעולן לרכב</h2>
+          <p>נעלתם את המפתחות ברכב? איבדתם את מפתחות הרכב? אנחנו מספקים שירותי מנעולן מקצועיים לרכב שכוללים פתיחת דלתות רכב ללא נזק, שכפול מפתחות רכב, תכנות מפתחות חכמים (שבב), ותיקון מנעולי רכב. המנעולן שלנו מצויד בכלים המתקדמים ביותר לטיפול בכל סוגי הרכבים.</p>
+          <p>אנחנו עובדים עם כל סוגי הרכבים: פרטיים, מסחריים, אופנועים, ורכבים כבדים. השירות כולל הגעה מהירה למקום, פתיחה מקצועית ללא נזק לרכב, ושכפול מפתחות במקום. אנחנו גם מספקים שירות של תכנות מפתחות חכמים ושבבים למגוון רחב של דגמי רכב. כל העבודה נעשית בצורה מקצועית ובמחיר הוגן.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check"></i> פתיחת רכב ללא נזק</li>
+            <li><i class="fas fa-check"></i> שכפול מפתחות רכב במקום</li>
+            <li><i class="fas fa-check"></i> תכנות מפתחות חכמים ושבבים</li>
+            <li><i class="fas fa-check"></i> טיפול בכל סוגי הרכבים</li>
+          </ul>
+        </div>
+        <div class="service-detail-image">
+          <img data-placeholder="service-10" data-context="מנעולן פותח דלת רכב בזהירות עם כלי מיוחד" src="/assets/service-service-10.webp" alt="שירותי מנעולן לרכב">
+        </div>
+      
+    </div>
+  </div>
+</section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>מוכנים לקבל שירות מנעולן מקצועי?</h2>
+      <p>צרו קשר עכשיו לקבלת ייעוץ חינם והצעת מחיר. אנחנו זמינים 24/7 לשירותכם.</p>
+      <a href="/contact" class="btn-primary btn-large">צור קשר עכשיו</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  
+    <!-- Legal Footer -->
+    <footer class="legal-footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="all-rights-reserved">
+            <p>© 2025 מנעולן. כל הזכויות שמורות.</p>
+          </div>
+          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-legal">
+            <a href="/privacy" aria-label="מדיניות פרטיות">
+              מדיניות פרטיות
+            </a>
+            <span class="separator">|</span>
+            <a href="/accessibility" aria-label="נגישות">
+              נגישות
+            </a>
+            <span class="separator">|</span>
+            <a href="/terms" aria-label="תנאי שימוש">
+              תנאי שימוש
+            </a>
+          </div>
+        </div>
+        <div class="zappy-attribution">
+          <p>נוצר באמצעות&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Zappy</a></p>
+        </div>
+      </div>
+    </footer>
+
+
+<!-- Zappy Attribution Header Script -->
+<script>
+(function() {
+  var websiteId = '833aaef8-42b5-4ec2-83f3-0e0be2bcbb5c';
+  
+  // Don't show header in preview mode
+  var currentUrl = window.location.href;
+  var isPreview = currentUrl.includes('/preview/') || 
+                  currentUrl.includes('/preview-fullscreen/') || 
+                  currentUrl.includes('localhost:5001') ||
+                  currentUrl.includes('localhost:3000');
+  
+  if (isPreview) {
+    return; // Exit early in preview mode
+  }
+  
+  fetch('https://api.zappy5.com/api/website/' + websiteId + '/tier')
+    .then(function(response) { return response.json(); })
+    .then(function(data) {
+      if (data.showAttribution) {
+        var header = document.getElementById('zappy-attribution-header');
+        if (header) {
+          // Use dynamic announcement content if available
+          if (data.announcement && data.announcement.html) {
+            header.innerHTML = data.announcement.html;
+          }
+          // Apply fixed positioning styles inline (works for existing sites too)
+          header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
+          // Fix child elements that might have position: fixed from old CSS
+          var children = header.querySelectorAll('*');
+          for (var i = 0; i < children.length; i++) {
+            children[i].style.position = 'static';
+          }
+          // Get header height
+          var headerHeight = header.offsetHeight;
+          // Find and fix navbar to be fixed as well (prevents gap at top of page)
+          var navSelectors = ['nav', '.navbar', '.nav'];
+          var navbar = null;
+          for (var j = 0; j < navSelectors.length; j++) {
+            navbar = document.querySelector(navSelectors[j]);
+            if (navbar && navbar.id !== 'zappy-attribution-header') break;
+            navbar = null;
+          }
+          if (navbar) {
+            var navbarHeight = navbar.offsetHeight;
+            navbar.style.cssText += '; position: fixed !important; top: ' + headerHeight + 'px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99998 !important;';
+            document.body.style.paddingTop = (headerHeight + navbarHeight) + 'px';
+          } else {
+            document.body.style.paddingTop = headerHeight + 'px';
+          }
+        }
+      }
+    })
+    .catch(function(error) {
+      console.error('Failed to check tier:', error);
+    });
+})();
+</script>
+    <div data-integration="accessibility:toolbar"></div>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+    })();
+    </script>
+    <script src="/script.js"></script>
+</body></html>
